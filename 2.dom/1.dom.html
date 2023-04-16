@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header"></header>
+    <section>
+      <img src="../findRabbit/img/rabbit.png" alt="" />
+      <img src="../findRabbit/img/carrot.png" alt="" />
+    </section>
+    <script>
+      //quertSelector = 가장 첫번째에 있는 해당 태그를 불러오고, 찾지못하면 null을 return
+      const image = document.querySelector('img');
+      const images = document.querySelectorAll('img');
+      const getId = document.getElementById('header');
+      console.log(image);
+      console.log(images);
+      console.log(getId);
+
+      const section = document.querySelector('section');
+      const h2 = document.createElement('h2');
+      h2.setAttribute('class', 'title'); //<h2 class="title"></h2>
+      h2.textContent = '하이';
+      section.insertBefore(h2, image);
+      section.innerHTML = `
+        <h2>하이</h2>
+        <img src="../findRabbit/img/rabbit.png" alt="" />
+        <img src="../findRabbit/img/carrot.png" alt="" />
+        
+      `;
+    </script>
+  </body>
+</html>

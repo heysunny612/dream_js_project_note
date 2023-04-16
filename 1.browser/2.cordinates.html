@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cordinates</title>
+    <style>
+      div > div {
+        margin: 4px;
+        width: 250px;
+        height: 250px;
+        background-color: pink;
+        border-radius: 4px;
+      }
+      div > div:nth-last-child(7) {
+        background-color: black;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="event">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <script>
+      const $event = document.querySelector('.event');
+
+      $event.addEventListener('click', (e) => {
+        const rect = event.target.getBoundingClientRect();
+        event.target.innerHTML = `
+        client: X ${e.clientX} Y ${e.clientY} <br>
+        page : X ${e.pageX} Y ${e.pageY} <br>
+        rect : X ${rect.x} Y ${rect.y} <br>
+        rect : Right ${rect.right} Bottom ${rect.bottom} 
+        `;
+
+        console.log(`${e.clientX} ${e.clientY} / ${e.pageX} ${e.pageY} `);
+      });
+    </script>
+  </body>
+</html>
+
+<!-- //Coordinates 좌표
+//Element.getBoundingClientRect ()
+//Client x,y vs Page x,y
+//Client x,y는 브라우저 창 크기와동일
+//Page x,y 는 DOM크기를 전부 포함한 크기임
+
+2.cordinates -->

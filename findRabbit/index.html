@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #000;
+      }
+      button {
+        position: fixed;
+        top: 15px;
+        left: 50%;
+        background-color: tomato;
+        cursor: pointer;
+        outline: none;
+        font-size: 32px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div class="rabbit"><img src="./img/rabbit.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+      <div><img src="./img/carrot.png" alt="" /></div>
+    </section>
+    <button>Find a rabbit</button>
+    <script>
+      const $button = document.querySelector('button');
+      const $rabbit = document.querySelector('.rabbit');
+      $button.addEventListener('click', () => {
+        $rabbit.scrollIntoView({ block: 'center', behavior: 'smooth' });
+      });
+    </script>
+  </body>
+</html>
